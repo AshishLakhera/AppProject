@@ -1,0 +1,36 @@
+<div class="row">
+ 
+    <div class="col-md-12" style="padding-left:200px;margin-top: 20px">
+      <div class="row">
+        <div class="col-md-2">EmployeeName:-</div>
+        <div class="col-md-2">
+          <input type="text" [(ngModel)]="EmpModel.name"/>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-2">Employee Salary:-</div>
+        <div class="col-md-2">
+          <input type="text"  [(ngModel)]="EmpModel.salary"/>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Department:-</div>
+          <div class="col-md-2">
+            <input type="text"  [(ngModel)]="EmpModel.department"/>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-md-2">Employee Joining Date:-</div>
+        <div class="col-md-2">
+          <input type="datetime"  [(ngModel)]="EmpModel.joiningDate"/>
+        </div>
+      </div>
+
+   <div class="div" style="padding-left:400px;padding-top: 20px ">
+      <input type="button" (click)="onSubmit()" value="Submit" class="text-centre primary btn btn-success" />
+    </div>
+ 
+    </div>
+   
+</div>

@@ -20,8 +20,14 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "angular-admin-lte": "^2.0.0",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "guid-typescript": "^1.0.9",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "morris.js": "^0.5.0",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.3.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

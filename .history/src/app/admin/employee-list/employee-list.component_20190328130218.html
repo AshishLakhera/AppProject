@@ -1,0 +1,25 @@
+<div>
+<table border="1">
+  <thead>
+  <tr>
+    <td>Employee Name</td>
+    <td>Employee Code</td>
+    <td>Employee Department</td>
+    <td>Employee Salary</td>
+    <td>Employee joiningDay</td>
+    <td>Action</td>
+  </tr>
+</thead>
+<tbody   *ngFor="let emp of employee">
+  <tr>
+  <td>{{emp.Name}}</td>
+  <td>{{emp.employeeCode}}</td>
+  <td>{{emp.department}}</td>
+  <td>{{emp.salary}}</td>
+  <td>{{emp.joiningDate}}</td>
+  <td>{{emp.Id}}</td>
+  <td><a href="/editEmployee">Edit</a> &nbsp;<a href="/DeleteEmployee">Delete</a></td>
+</tr>
+</tbody>
+</table>
+</div>
