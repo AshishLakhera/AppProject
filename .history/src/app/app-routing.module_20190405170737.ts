@@ -7,7 +7,6 @@ import { ImportExcelComponent } from './Admin/import-excel/import-excel.componen
 import { DialogComponent } from './Admin/upload-file/Dialog/dialog/dialog.component';
 import { UploadFileComponent } from './Admin/upload-file/upload-file.component';
 import { AuthGaurd } from './Services/AuthenticationServices/auth-gaurd';
-import { LoginComponent } from './Admin/login/login/login.component';
  const appRoutes: Routes = [
     {path: '', redirectTo: '/employeeList', pathMatch: 'full', canActivate: [AuthGaurd] },
     {path : 'employeeList', component: EmployeeListComponent},

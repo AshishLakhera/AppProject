@@ -6,16 +6,13 @@ import { EmployeeEditComponent } from './Admin/employee-edit/employee-edit.compo
 import { ImportExcelComponent } from './Admin/import-excel/import-excel.component';
 import { DialogComponent } from './Admin/upload-file/Dialog/dialog/dialog.component';
 import { UploadFileComponent } from './Admin/upload-file/upload-file.component';
-import { AuthGaurd } from './Services/AuthenticationServices/auth-gaurd';
-import { LoginComponent } from './Admin/login/login/login.component';
  const appRoutes: Routes = [
-    {path: '', redirectTo: '/employeeList', pathMatch: 'full', canActivate: [AuthGaurd] },
+    {path: '', redirectTo: '/employeeList', pathMatch: 'full', canActivate: [AuthGuard] },
     {path : 'employeeList', component: EmployeeListComponent},
     {path : 'addEmployee', component: EmployeeComponent},
     {path : 'editEmployee', component: EmployeeEditComponent},
     {path : 'importExcel', component: ImportExcelComponent},
     {path : 'uploadFile', component: UploadFileComponent},
-    {path : 'Login', component: LoginComponent}
 
  ];
 

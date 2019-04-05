@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { Guid } from 'guid-typescript';
 import { employeeServices } from 'src/app/Services/EmployeeServices/employee.Service';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-edit-button',
   templateUrl: './edit-button.component.html',
@@ -14,19 +14,15 @@ export class EditButtonComponent implements OnInit, ICellRendererAngularComp {
   agInit(params: any): void {
       this.params = params;
   }
-  constructor(private emplyeeService: employeeServices, private router: Router) { }
+  constructor(private emplyeeService: employeeServices) { }
 
   ngOnInit() {
   }
   public refresh(params?: any): boolean {
     return true;
 }
-editbtn($event) {
-  this.emplyeeService.sendEmp(this.params.node.data);
-  this.router.navigate(['editEmployee']);
-}
 deletebtn($event) {
-  // console.log('delete click');
+  console.log('delete click');
   // if (this.params.deletebtn instanceof Function) {
     // put anything into params u want pass into parents component
   //   const params = {

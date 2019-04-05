@@ -55,6 +55,7 @@ gData(): any {
     return this.k;
 }
   onDeleteBtnClick1(e) {
+    this.router.navigate(['editEmployee']);
     this.rowDataClicked1 = e.employee;
   }
   ngOnInit() {

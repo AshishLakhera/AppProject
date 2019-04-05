@@ -14,7 +14,7 @@ export class EditButtonComponent implements OnInit, ICellRendererAngularComp {
   agInit(params: any): void {
       this.params = params;
   }
-  constructor(private emplyeeService: employeeServices, private router: Router) { }
+  constructor(private emplyeeService: employeeServices) { }
 
   ngOnInit() {
   }
@@ -22,8 +22,8 @@ export class EditButtonComponent implements OnInit, ICellRendererAngularComp {
     return true;
 }
 editbtn($event) {
-  this.emplyeeService.sendEmp(this.params.node.data);
   this.router.navigate(['editEmployee']);
+  this.emplyeeService.EditEmployee1(this.params.node.data);
 }
 deletebtn($event) {
   // console.log('delete click');

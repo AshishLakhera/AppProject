@@ -29,6 +29,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { UploadService } from './Services/uploadFileService/uploadfile.service';
 import { EditButtonComponent } from './Admin/employee-list/edit-button/edit-button.component';
+import { LoginComponent } from './Admin/login/login/login.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { EditButtonComponent } from './Admin/employee-list/edit-button/edit-butt
     UploadFileComponent,
     DialogComponent,
     UploadFileComponent,
-    EditButtonComponent
+    EditButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

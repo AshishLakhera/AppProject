@@ -15,7 +15,7 @@ import { EditButtonComponent } from './edit-button/edit-button.component';
 export class EmployeeListComponent implements OnInit, OnDestroy {
   employee: employeeModel[];
   k = [];
-  rowDataClicked1 = [];
+
   public startedEditing1 = new Subject<employeeModel>();
   empSubs: Subscription;
   columnDefs = [
@@ -27,7 +27,7 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
     {headerName: 'Id', field: 'id'},
     {headerName: 'Action', field: 'Action', cellRendererFramework: EditButtonComponent
   , cellRendererParams: {
-    onClick: (params) => (this.onDeleteBtnClick1.bind(this)) ,
+    onClick: (params) => (this.deleteemp),
     label: 'Click'
   }},
 ];
@@ -54,9 +54,6 @@ gData(): any {
     console.log(this.k);
     return this.k;
 }
-  onDeleteBtnClick1(e) {
-    this.rowDataClicked1 = e.employee;
-  }
   ngOnInit() {
   this.empSubs = this.getData();
   this.em = this.getData();

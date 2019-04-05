@@ -27,7 +27,7 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
     {headerName: 'Id', field: 'id'},
     {headerName: 'Action', field: 'Action', cellRendererFramework: EditButtonComponent
   , cellRendererParams: {
-    onClick: (params) => (this.onDeleteBtnClick1.bind(this)) ,
+    onClick: (params) => (this.deleteemp) ,
     label: 'Click'
   }},
 ];

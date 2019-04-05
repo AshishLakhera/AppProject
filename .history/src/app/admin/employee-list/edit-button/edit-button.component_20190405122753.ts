@@ -22,7 +22,7 @@ export class EditButtonComponent implements OnInit, ICellRendererAngularComp {
     return true;
 }
 editbtn($event) {
-  this.emplyeeService.sendEmp(this.params.node.data);
+  this.emplyeeService.empData = this.params.node.data;
   this.router.navigate(['editEmployee']);
 }
 deletebtn($event) {
