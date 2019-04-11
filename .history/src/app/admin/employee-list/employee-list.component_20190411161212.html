@@ -1,0 +1,53 @@
+<!-- <div>
+<table border="1">
+  <thead>
+  <tr>
+    <td>Employee Name</td>
+    <td>Employee Code</td>
+    <td>Employee Department</td>
+    <td>Employee Salary</td>
+    <td>Employee joiningDay</td>
+    <td>Id</td>
+    <td>  </td>
+  </tr>
+</thead>
+<tbody   *ngFor="let emp of employee; let i = index">
+  <tr>
+  <td>{{emp.name}}</td>
+  <td>{{emp.employeeCode}}</td>
+  <td>{{emp.department}}</td>
+  <td>{{emp.salary}}</td>
+  <td>{{emp.joiningDate}}</td>
+  <td>{{emp.id}}</td>
+  <td><button (click)="editClick(emp)">Edit</button> &nbsp;<button (click)="deleteemp(emp)">Delete</button></td>
+</tr>
+</tbody>
+</table>
+</div> -->
+<div>
+
+  <button (click)="deleteSelectedRows()"  
+          Delete Selected Row> Delete Selected Row</button>
+ 
+</div>
+<ag-grid-angular 
+    style="width: 1500px; height: 500px;" 
+    class="ag-theme-balham"
+    
+   
+    [animateRows]="true"
+    enableColResize="true"
+    [pagination]="true"
+    [rowData]="employee" 
+    [columnDefs]="columnDefs"
+    [gridOptions]="gridOptions"
+    (cellValueChanged)="InlineEdit($event)"
+    
+    
+    > 
+</ag-grid-angular>  
+<!-- <ag-grid-angular 
+    style="width: 1500px; height: 500px;" 
+    class="ag-theme-balham"
+    [gridOptions]=gridOptions>
+</ag-grid-angular>  -->
